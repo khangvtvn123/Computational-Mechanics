@@ -12,10 +12,13 @@ r0 = np.linspace(-1, 1, 100)
 A = (2*1.5/r0) + 2*np.pi*r0**2
 plt.plot(r0, A)
 plt.show()
+
+
 def function(var):
     return 2*1.5 / var + 2*np.pi*var**2
 
-r = op.minimize(function,0.5)
+
+r = op.minimize(function, 0.5)
 print(r)
 print("r = 0.62035063")
 print("h = ", 1.5 / (np.pi * 0.62035063**2))

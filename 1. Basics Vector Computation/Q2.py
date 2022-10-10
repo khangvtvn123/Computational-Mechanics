@@ -28,7 +28,7 @@ print("--> (ab)^T = b^T a^T")
 
 # (d) Create two square matrices of equal size and show that (cd)^-1 = d^-1 c^-1
 print("\n(d)")
-c = np.array([[-1, -2, -3],[-15, 16, 17],[24, -23, 22]])
+c = np.array([[-1, -2, -3], [-15, 16, 17], [24, -23, 22]])
 d = np.array([[55, -1, 12], [95, -6, -5], [512, 4, 49]])
 print("c = \n", c)
 print("d = \n", d)

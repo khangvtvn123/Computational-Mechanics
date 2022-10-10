@@ -5,6 +5,7 @@ import scipy.optimize as op
 print("y = -2*x - 4")
 print("y = x**2 - 4")
 
+
 def fun(var):
     x = var[0]
     y = var[1]
@@ -12,8 +13,10 @@ def fun(var):
     eq1 = -2 * x - 4 - y
     eq2 = x**2 - 4 - y
     return [eq1, eq2]
+
+
 print("Solutions (x, y): ")
-results = op.fsolve(fun,[10, 10])
+results = op.fsolve(fun, [10, 10])
 print(results, " ~= [0, -4]")
-results = op.fsolve(fun,[-5, 2])
+results = op.fsolve(fun, [-5, 2])
 print(results, " ~= [-2, 0]")

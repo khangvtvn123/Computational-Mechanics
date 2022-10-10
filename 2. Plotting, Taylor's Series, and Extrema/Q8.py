@@ -7,11 +7,13 @@ import scipy.optimize as op
 # -> dA/dx = 2(y - 1000/x^2)
 #    dA/dy = 2(x - 1000/y^2)
 
+
 def gradientA(var):
-  (x, y) = var
-  Ax = 2 * (y - (1000/x/x))
-  Ay = 2 * (x - (1000/y/y))
-  return [Ax, Ay]
+    (x, y) = var
+    Ax = 2 * (y - (1000/x/x))
+    Ay = 2 * (x - (1000/y/y))
+    return [Ax, Ay]
+
 
 r = op.fsolve(gradientA, [1, 1])
 print("The value of (x, y):", r)

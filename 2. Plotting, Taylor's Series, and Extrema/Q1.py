@@ -11,7 +11,7 @@ print("d^3v/dr^3 \t= -cos(r)")
 
 # b
 print("\n(b)")
-r = np.linspace(-np.pi,np.pi,100)
+r = np.linspace(-np.pi, np.pi, 100)
 v = np.sin(r) + r**2 + 1
 plt.plot(r, v)
 plt.show()
@@ -27,8 +27,12 @@ w = np.cos(r) + 2*r
 plt.plot(r, w)
 plt.show()
 # find root of w
+
+
 def function(root):
-  return np.cos(root) + 2*root
+    return np.cos(root) + 2*root
+
+
 root = op.fsolve(function, 1000000)
 print("w = 0 at r = ", root[0])
 print("This result is relatively close to the expected value stated in part c.")
