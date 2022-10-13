@@ -6,7 +6,7 @@ import scipy.optimize as op
 tensile = np.loadtxt("./4. Curve Fitting/Homework 4/stressstrain.csv", delimiter=",")
 strain = tensile[:, 0]
 stress = tensile[:, 1]
-plt.scatter(strain, stress, s=2)
+plt.scatter(strain, stress, s = 2)
 plt.show()
 
 

@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy.optimize as op
 from sklearn.linear_model import LinearRegression
 from scipy.io import loadmat
 
@@ -45,10 +44,8 @@ plt.show()
 X2 = np.empty((len(X_dummy), 2))
 X2[:, 0] = X_dummy
 X2[:, 1] = X_dummy**2
-print(X2)
 reg2 = LinearRegression().fit(X2, Yquad_noise)
-print("Best fit function Y = ", reg2.intercept_, "+",
-      reg2.coef_[0], "* X +", reg2.coef_[1], "* X^2")
+print("Best fit function Y = ", reg2.intercept_, "+", reg2.coef_[0], "* X +", reg2.coef_[1], "* X^2")
 best_fit2 = reg2.intercept_ + reg2.coef_[0]*X2[:, 0] + reg2.coef_[1]*X2[:, 1]
 plt.plot(X_dummy, Yquad, X_dummy, best_fit2)
 plt.scatter(X_dummy, Yquad_noise)
@@ -56,6 +53,7 @@ plt.show()
 
 
 # load data from mat file -----------------------------------------------------------
+print("\n\n")
 data = loadmat("./4. Curve Fitting/Homework 4/data.mat", squeeze_me=True)
 X = data['x']
 X_array = np.asarray(X)
@@ -70,7 +68,6 @@ X3 = np.empty((len(X), 3))
 X3[:, 0] = X
 X3[:, 1] = X**2
 X3[:, 2] = X**3
-print(X3)
 reg3 = LinearRegression().fit(X3, Y)
 print("Best fit function Y = ", reg3.intercept_, "+", reg3.coef_[0], "* X +", reg3.coef_[1], "* X^2 +", reg3.coef_[2], "* X^3")
 best_fit3 = reg3.intercept_ + reg3.coef_[0]*X3[:, 0] + reg3.coef_[1]*X3[:, 1] + reg3.coef_[2]*X3[:, 2]
