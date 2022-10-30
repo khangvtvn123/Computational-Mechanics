@@ -6,7 +6,7 @@ print("Matrix A = \t[-k/m_1\tk/m_2\t0\t]")
 print("\t\t[k/m_2\t-2k/m_2\tk/m_2\t]")
 print("\t\t[0\tk_m_1\t-k/m_1\t]")
 print("Column eigenvector u = [A_1   A_2   A_3]")
-print("Eigenvalue lamda = w^2")
+print("Eigenvalue lamda = -w^2")
 
 # find eigen value and eigen vector
 k = 1.8e2
